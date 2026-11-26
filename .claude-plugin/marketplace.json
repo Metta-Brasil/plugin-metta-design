@@ -1,0 +1,17 @@
+{
+  "name": "metta-design",
+  "owner": {
+    "name": "Metta Brasil"
+  },
+  "metadata": {
+    "description": "Plugins da Metta Brasil para Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "metta-design",
+      "source": "./",
+      "description": "Metta Design System — kits de slides, editorial e marketing com tokens, fontes, assets e componentes da marca Metta.",
+      "version": "1.0.0"
+    }
+  ]
+}

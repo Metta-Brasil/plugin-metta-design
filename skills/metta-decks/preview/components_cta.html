@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#0C161B;color:#fff}
+  .card{padding:24px;display:flex;flex-direction:column;gap:14px}
+  .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .cta{font-family:inherit;border:0;cursor:pointer;padding:14px 26px;border-radius:999px;font-weight:700;font-stretch:132%;text-transform:uppercase;letter-spacing:.06em;font-size:13px;transition:transform .12s ease, background .15s ease, box-shadow .15s ease}
+  /* Regra: cor da borda = cor do texto */
+  .p-yellow{background:#FFBE18;color:#0C161B}
+  .p-yellow:hover{background:#FFC531}
+  .p-ice{background:#FAFCFD;color:#0C161B}
+  .p-ice:hover{background:#EBF3F7}
+  .p-dark{background:#0C161B;color:#FFBE18;border:1px solid #FFBE18}
+  .p-dark:hover{background:#1A2A35}
+  .p-dark-ice{background:#0C161B;color:#FAFCFD;border:1px solid #FAFCFD}
+  .p-dark-ice:hover{background:#1A2A35}
+  .o-white{background:transparent;color:#fff;border:1px solid #fff}
+  .o-white:hover{background:rgba(255,255,255,.08)}
+  .o-yellow{background:transparent;color:#FFBE18;border:1px solid #FFBE18}
+  .o-yellow:hover{background:rgba(255,190,24,.1)}
+  .o-dark{background:transparent;color:#0C161B;border:1px solid #0C161B}
+  .o-dark:hover{background:rgba(12,22,27,.06)}
+  .o-support{background:transparent;color:#435965;border:1px solid #435965}
+  .o-support:hover{background:rgba(67,89,101,.06)}
+  .sub-row{display:flex;gap:12px;flex-wrap:wrap;padding:10px 12px;border-radius:12px}
+  .on-ice{background:#FAFCFD}
+  .on-yellow{background:#FFBE18}
+  .title{font-weight:540;font-stretch:132%;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#FFBE18}
+  .sub-title{font-weight:540;font-stretch:132%;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#688594}
+</style></head>
+<body>
+<div class="card">
+  <div class="title">CTAs · Pills</div>
+
+  <div class="sub-title">Primárias · fundo cheio</div>
+  <div class="row">
+    <button class="cta p-yellow">QUERO PARTICIPAR</button>
+    <button class="cta p-dark">SAIBA MAIS</button>
+    <button class="cta p-ice">VER DETALHES</button>
+    <button class="cta p-dark-ice">INSCREVER-SE</button>
+  </div>
+
+  <div class="sub-title">Outline · borda = texto</div>
+  <div class="row">
+    <button class="cta o-white">GHOST WHITE</button>
+    <button class="cta o-yellow">GHOST YELLOW</button>
+  </div>
+
+  <div class="sub-row on-ice">
+    <button class="cta o-dark">GHOST DARK</button>
+    <button class="cta o-support">GHOST SUPORTE</button>
+    <button class="cta p-yellow">AMARELO SOBRE GELO</button>
+  </div>
+
+  <div class="sub-row on-yellow">
+    <button class="cta p-dark" style="border-color:#0C161B;color:#FFBE18;background:#0C161B">DARK SOBRE AMARELO</button>
+    <button class="cta o-dark">GHOST DARK SOBRE AMARELO</button>
+  </div>
+</div>
+</body></html>

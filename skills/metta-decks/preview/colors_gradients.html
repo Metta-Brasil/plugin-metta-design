@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#0C161B;color:#fff}
+  .card{padding:20px 24px;display:flex;flex-direction:column;gap:12px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .sw{border-radius:10px;height:96px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+  .sw .lbl{position:absolute;left:10px;bottom:8px;font-weight:540;font-stretch:132%;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+  .sw.dk .lbl{color:#0C161B;text-shadow:none}
+  .title{font-weight:540;font-stretch:132%;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#FFBE18}
+</style></head>
+<body>
+<div class="card">
+  <div class="title">Gradientes aprovados</div>
+  <div class="grid">
+    <div class="sw dk" style="background:radial-gradient(circle at 73% 2%, #FFFFFF 36%, #E0E6E9 100%)"><span class="lbl">Radial Claro</span></div>
+    <div class="sw" style="background:radial-gradient(circle at 50% 41%, #0C161B 0%, #0C161B 100%), linear-gradient(135deg,#0C161B,#1E2D36)"><span class="lbl">Radial Escuro</span></div>
+    <div class="sw dk" style="background:radial-gradient(circle at 82% 10%, #FFBE18 59%, #FFE4A1 100%)"><span class="lbl">Amarelo Radial</span></div>
+    <div class="sw" style="background:linear-gradient(135deg,#435965 0%,#75919F 100%)"><span class="lbl">Blue-grays 135°</span></div>
+    <div class="sw dk" style="background:linear-gradient(226deg,#FFC443 10%,#FFB618 97%);grid-column:span 2"><span class="lbl">Linear Amarelo 226°</span></div>
+  </div>
+</div>
+</body></html>

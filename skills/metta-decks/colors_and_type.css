@@ -1,0 +1,244 @@
+/* ============================================================
+   Metta Design System — Foundations
+   ============================================================
+   SF Pro Variable (primary) → Roboto Flex (fallback, both axes)
+   Colors per brand spec; opacity tokens included.
+============================================================ */
+
+/* ------------ FONT FACES ------------ */
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro'), local('SF Pro Display'),
+       url('fonts/SF-Pro-Variable-Official.ttf') format('truetype-variations'),
+       url('fonts/SF-Pro-Variable-Official.ttf') format('truetype');
+  font-weight: 1 1000;
+  font-stretch: 30% 150%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('fonts/SF-Pro-Italic-Variable-Official.ttf') format('truetype-variations'),
+       url('fonts/SF-Pro-Italic-Variable-Official.ttf') format('truetype');
+  font-weight: 1 1000;
+  font-stretch: 30% 150%;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Roboto Flex fallback (variable, same axes) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap');
+
+:root {
+  /* ---------- COLOR — PRIMARIES ---------- */
+  --metta-yellow:           #FFBE18;   /* brand primary */
+  --metta-yellow-alt:       #FFB618;   /* solid variant */
+  --metta-yellow-light:     #FFC531;   /* strokes, secondaries */
+  --metta-yellow-medium:    #FFCE50;   /* aux backgrounds */
+  --metta-yellow-soft:      #FFE4A1;   /* hovers, soft fills */
+
+  --metta-blue-night:       #0C161B;   /* core dark */
+  --metta-blue-deep:        #0A1013;   /* deepest dark */
+
+  /* ---------- COLOR — NEUTRALS ---------- */
+  --metta-white:            #FFFFFF;
+  --metta-ice:              #FAFCFD;
+  --metta-ice-blue:         #EBF3F7;
+  --metta-gray-very-light:  #EFF3F5;
+  --metta-gray-light:       #F0F0F0;
+  --metta-gray:             #EDEDED;
+
+  /* ---------- COLOR — BLUE-GRAYS ---------- */
+  --metta-bluegray:         #435965;   /* secondary text */
+  --metta-bluegray-light:   #688594;   /* tertiary text */
+  --metta-bluegray-soft:    #75919F;   /* tags, metadata */
+  --metta-bluegray-vlight:  #A8B3B9;   /* dividers, grid */
+
+  /* ---------- DARK SURFACE VARIANTS (from playbook) ---------- */
+  --metta-dark-card:        #1A2A35;   /* elevated card on dark */
+  --metta-dark-slate:       #2E3E47;
+  --metta-steel:            #B0CAD8;   /* muted text on dark */
+
+  /* ---------- ACCENT (marca pessoal) ---------- */
+  --metta-steel-blue:       #4A7FA5;
+
+  /* ---------- OPACITY TOKENS ---------- */
+  --metta-divider-on-light: rgba(12, 22, 27, 0.20);
+  --metta-text-on-light-2:  rgba(12, 22, 27, 0.60);
+  --metta-divider-on-dark:  rgba(255, 255, 255, 0.20);
+  --metta-yellow-subtle:    rgba(255, 190, 24, 0.10);
+  --metta-grid-on-dark:     rgba(58, 109, 137, 0.28);
+  --metta-ghost-fill:       rgba(67, 89, 101, 0.08);
+  --metta-stroke-outline:   rgba(202, 217, 224, 0.87);
+
+  /* ---------- GRADIENTS ---------- */
+  --metta-grad-radial-light:  radial-gradient(circle at 73% 2%, #FFFFFF 36%, #E0E6E9 100%);
+  --metta-grad-radial-dark:   radial-gradient(circle at 50% 41%, #0C161B 0%, #0C161B 100%);
+  --metta-grad-yellow-radial: radial-gradient(circle at 82% 10%, #FFBE18 59%);
+  --metta-grad-angular-dark:  conic-gradient(from 78deg at 33% 75%, #0C161B 5%, #435965 62%, #1E2D36 82%);
+  --metta-grad-linear-yellow: linear-gradient(226deg, #FFC443 10%, #FFB618 97%);
+
+  /* ---------- SEMANTIC COLORS ---------- */
+  --fg-1:       var(--metta-blue-night);    /* primary text on light */
+  --fg-2:       var(--metta-bluegray);      /* secondary text on light */
+  --fg-3:       var(--metta-bluegray-light);/* tertiary text on light */
+  --fg-muted:   var(--metta-bluegray-soft);
+
+  --fg-1-dark:  var(--metta-white);         /* primary text on dark */
+  --fg-2-dark:  var(--metta-steel);         /* secondary text on dark */
+  --fg-3-dark:  var(--metta-bluegray-light);
+
+  --bg-1:       var(--metta-white);
+  --bg-2:       var(--metta-ice);
+  --bg-3:       var(--metta-ice-blue);
+  --bg-section: var(--metta-gray-very-light);
+
+  --bg-1-dark:  var(--metta-blue-night);
+  --bg-2-dark:  var(--metta-blue-deep);
+  --bg-card-dark: var(--metta-dark-card);
+
+  --accent:          var(--metta-yellow);
+  --accent-hover:    var(--metta-yellow-light);
+  --accent-pressed:  var(--metta-yellow-alt);
+  --accent-subtle:   var(--metta-yellow-subtle);
+
+  --border-light:    var(--metta-divider-on-light);
+  --border-dark:     var(--metta-divider-on-dark);
+  --border-outline:  var(--metta-stroke-outline);
+
+  /* ---------- FONT FAMILY STACKS ---------- */
+  --font-sans:       'SF Pro', 'Roboto Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display:    'SF Pro', 'Roboto Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ---------- RADII ---------- */
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  24px;
+  --radius-pill: 999px;
+
+  /* ---------- SPACING ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* ---------- SHADOWS (minimal — Metta uses glow + depth, no harsh shadow) ---------- */
+  --shadow-sm:     0 1px 2px rgba(12, 22, 27, 0.06);
+  --shadow-md:     0 8px 24px rgba(12, 22, 27, 0.08);
+  --shadow-lg:     0 24px 48px rgba(12, 22, 27, 0.12);
+  --glow-yellow:   0 0 120px rgba(255, 190, 24, 0.18); /* ambient only — NEVER on logo */
+  --glow-teal:     0 0 200px rgba(52, 115, 118, 0.10);
+}
+
+/* ============================================================
+   BASE ELEMENTS
+============================================================ */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-stretch: 100%;
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+  color: var(--fg-1);
+  background: var(--bg-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   TYPOGRAPHY — Named variations (Expanded family)
+============================================================ */
+.expanded-heavy    { font-weight: 870; font-stretch: 132%; }
+.expanded-bold     { font-weight: 700; font-stretch: 132%; }
+.expanded-semibold { font-weight: 650; font-stretch: 132%; }
+.expanded-medium   { font-weight: 540; font-stretch: 132%; }
+.expanded-regular  { font-weight: 410; font-stretch: 132%; }
+.expanded-light    { font-weight: 270; font-stretch: 132%; }
+
+/* Regular family (body) */
+.regular-semibold  { font-weight: 650; font-stretch: 100%; }
+.regular-medium-p  { font-weight: 590; font-stretch: 100%; }
+.regular-medium    { font-weight: 510; font-stretch: 100%; }
+.regular-book      { font-weight: 400; font-stretch: 100%; }
+.regular-light     { font-weight: 270; font-stretch: 100%; }
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+============================================================ */
+h1, .h1, .display-hero {
+  font-family: var(--font-display);
+  font-weight: 870; font-stretch: 132%;
+  font-size: clamp(60px, 9vw, 130px);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 650; font-stretch: 132%;
+  font-size: clamp(40px, 5vw, 52px);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 590; font-stretch: 100%;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+h4, .h4 {
+  font-family: var(--font-display);
+  font-weight: 590; font-stretch: 100%;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.display-xl { font-weight: 870; font-stretch: 132%; font-size: clamp(100px, 11vw, 142px); line-height: 0.88; letter-spacing: -0.01em; }
+.display-l  { font-weight: 650; font-stretch: 132%; font-size: clamp(78px, 8vw, 99px); line-height: 0.90; letter-spacing: -0.01em; }
+.display-m  { font-weight: 650; font-stretch: 132%; font-size: clamp(60px, 6vw, 75px); line-height: 0.90; letter-spacing: -0.01em; }
+
+.body-l     { font-weight: 590; font-stretch: 100%; font-size: clamp(18px, 1.4vw, 22px); line-height: 1.55; letter-spacing: -0.01em; }
+.body-m     { font-weight: 400; font-stretch: 100%; font-size: 16px; line-height: 1.65; letter-spacing: -0.01em; }
+.body-s     { font-weight: 400; font-stretch: 100%; font-size: 14px; line-height: 1.55; letter-spacing: -0.01em; }
+.body-light { font-weight: 270; font-stretch: 100%; font-size: clamp(18px, 1.6vw, 24px); line-height: 1.55; letter-spacing: -0.01em; }
+
+p { font-weight: 400; font-stretch: 100%; line-height: 1.65; letter-spacing: -0.01em; }
+
+.label-l        { font-weight: 540; font-stretch: 132%; font-size: 14px; letter-spacing: 0.10em; text-transform: uppercase; }
+.label-s        { font-weight: 540; font-stretch: 132%; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+.label-editorial{ font-weight: 270; font-stretch: 132%; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; }
+
+code, .mono {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.92em;
+}
+
+/* Yellow highlight on word inside headline */
+.accent-word { color: var(--accent); }
+
+/* ============================================================
+   UTILITIES
+============================================================ */
+.bg-dark     { background: var(--bg-1-dark); color: var(--fg-1-dark); }
+.bg-deep     { background: var(--bg-2-dark); color: var(--fg-1-dark); }
+.bg-white    { background: var(--bg-1); color: var(--fg-1); }
+.bg-ice      { background: var(--bg-2); color: var(--fg-1); }
+.bg-yellow   { background: var(--accent); color: var(--metta-blue-night); }
+.bg-grad-dark{ background: var(--metta-grad-angular-dark); color: var(--fg-1-dark); }
+.bg-grad-yellow{ background: var(--metta-grad-linear-yellow); color: var(--metta-blue-night); }
+
+.divider-light { height: 1px; background: var(--border-dark); width: 100%; }
+.divider-dark  { height: 1px; background: var(--border-light); width: 100%; }
+.yellow-band   { height: 6px; background: var(--accent); width: 100%; }

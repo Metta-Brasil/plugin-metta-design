@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#FAFCFD;color:#0C161B}
+  .wrap{padding:20px 22px;display:flex;flex-direction:column;gap:14px}
+  .f{display:flex;flex-direction:column;gap:6px;max-width:380px}
+  .f label{font-weight:540;font-stretch:132%;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#435965}
+  .f input,.f select{font-family:inherit;font-size:14px;padding:12px 14px;border-radius:12px;border:1px solid rgba(12,22,27,.12);background:#fff;color:#0C161B;outline:none;transition:border-color .15s, box-shadow .15s}
+  .f input:focus,.f select:focus{border-color:#FFBE18;box-shadow:0 0 0 3px rgba(255,190,24,.2)}
+  .f input::placeholder{color:#A8B3B9}
+  .row{display:flex;gap:14px;flex-wrap:wrap}
+  .row .f{flex:1;min-width:160px}
+  .hint{font-size:11px;color:#688594}
+  .title{font-weight:540;font-stretch:132%;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#435965}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="title">Form inputs</div>
+  <div class="row">
+    <div class="f"><label>NOME</label><input placeholder="Seu nome completo"></div>
+    <div class="f"><label>E-MAIL</label><input placeholder="voce@empresa.com.br"></div>
+  </div>
+  <div class="f"><label>CARGO</label><select><option>Selecione…</option><option>CEO / Sócio</option><option>Diretor Comercial</option></select></div>
+  <div class="hint">Focus ring amarelo · radius 12 · border #0C161B 12%</div>
+</div>
+</body></html>
