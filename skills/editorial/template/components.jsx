@@ -219,8 +219,8 @@ const QuoteBlock = ({ children, cite, tone = 'light' }) => (
 
 const Header = ({ tone = 'dark' }) => {
   const logoSrc = tone === 'dark'
-    ? '../../assets/logos/logo_metta_colorido_h.svg'
-    : '../../assets/logos/logo_metta_colorido_escuro_h.svg';
+    ? '../../../brand/assets/logos/logo_metta_colorido_h.svg'
+    : '../../../brand/assets/logos/logo_metta_colorido_escuro_h.svg';
   return (
     <header style={{
       padding: '22px 8%', display: 'flex', alignItems: 'center',
@@ -253,7 +253,7 @@ const Footer = () => (
     borderTop: '1px solid rgba(255,255,255,0.06)',
   }}>
     <div>
-      <img src="../../assets/signatures/assinatura_metta_branco.svg" alt="Metta"
+      <img src="../../../brand/assets/signatures/assinatura_metta_branco.svg" alt="Metta"
         style={{ height: 34, marginBottom: 14 }} />
       <p style={{
         fontWeight: 270, fontStretch: '132%', fontSize: 11,

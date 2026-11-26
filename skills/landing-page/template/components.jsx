@@ -36,7 +36,7 @@ const TopNav = ({ active = 'Método' }) => {
       padding: '18px 7%',
     }}>
       <a href="#" style={{ display: 'flex', alignItems: 'center' }}>
-        <img src="../../assets/logos/logo_metta_colorido_h.svg" alt="Metta" style={{ height: 24 }} />
+        <img src="../../../brand/assets/logos/logo_metta_colorido_h.svg" alt="Metta" style={{ height: 24 }} />
       </a>
       <nav style={{ display: 'flex', gap: 34 }}>
         {items.map(x => (
@@ -97,7 +97,7 @@ const Hero = () => (
     padding: '140px 7% 120px',
   }}>
     {/* Símbolo bleed */}
-    <img src="../../assets/symbols/simbolo_metta_amarelo.svg" alt=""
+    <img src="../../../brand/assets/symbols/simbolo_metta_amarelo.svg" alt=""
       aria-hidden="true"
       style={{
         position: 'absolute', right: '-8%', top: '8%',
@@ -293,7 +293,7 @@ const Testimonial = () => (
     background: M.dark, color: M.white,
     padding: '120px 7%', position: 'relative', overflow: 'hidden',
   }}>
-    <img src="../../assets/symbols/simbolo_metta_amarelo.svg" alt=""
+    <img src="../../../brand/assets/symbols/simbolo_metta_amarelo.svg" alt=""
       aria-hidden="true"
       style={{
         position: 'absolute', left: '-6%', bottom: '-12%',
@@ -584,7 +584,7 @@ const SiteFooter = () => (
       maxWidth: 1200, paddingBottom: 48, borderBottom: `1px solid ${M.divDark}`,
     }}>
       <div>
-        <img src="../../assets/signatures/assinatura_metta_branco.svg" alt="Metta"
+        <img src="../../../brand/assets/signatures/assinatura_metta_branco.svg" alt="Metta"
           style={{ height: 32, marginBottom: 16 }} />
         <p style={{
           fontWeight: 270, fontStretch: '132%', fontSize: 13, lineHeight: 1.6,

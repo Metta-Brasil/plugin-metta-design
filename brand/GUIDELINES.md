@@ -8,13 +8,24 @@ The design system here is distilled from the brand book, the `rpbrandstudio/mett
 
 ---
 
+## Hard rules
+
+- **Colors**: only the tokens in `colors_and_type.css`. Yellow `#FFBE18` is load-bearing — use for CTAs, single-word highlights, symbol fill, accent marks.
+- **Type**: only SF Pro Variable (or Roboto Flex fallback). Never Inter/Arial/Helvetica/Open Sans. Headlines → Expanded (132%). Body → Regular (100%). Use `font-weight` and `font-stretch` directly, not `font-variation-settings`.
+- **Logo**: never apply glow, shadow, or outer stroke to the logo or símbolo.
+- **Copy**: Brazilian Portuguese, "você", no emoji, no corporate jargon. Direct, founder-voice, confident.
+- **Icons**: no emoji, no invented SVG micro-kit. Use Material Symbols Rounded (see Iconography), typographic marks, or the Símbolo itself.
+
+---
+
 ## Sources
 
 | Source | Where |
 |---|---|
-| Uploaded logos, symbols, signatures, background plates | `uploads/` (copied into `assets/`) |
-| SF Pro Italic Variable TTF (regular weights referenced via `local()`) | `fonts/SF-Pro-Italic-Variable-Official.ttf` |
-| Full brand guideline spec (logo, colors, type, CSS tokens) | Pasted in the conversation kicking off this project |
+| Logos, symbols, signatures, background plates | `brand/assets/` |
+| SF Pro Italic Variable TTF (regular weights referenced via `local()`) | `brand/fonts/SF-Pro-Italic-Variable-Official.ttf` |
+| Ad layout references (feed 4:5, story 9:16, sample ad) | `skills/ads/reference/` |
+| Full brand guideline spec (logo, colors, type, CSS tokens) | Brand book provided by the team |
 | Content / ad / playbook HTML references | `rpbrandstudio/metta` GitHub repo → `output/` (playbook-codigo-metta, ads-isca-protocolo, ads-sessao-estrategica, sala-secreta, etc.) |
 | Cultural playbook (internal values, tone) | `rpbrandstudio/metta` → `O_Codigo_Metta_Playbook_de_Cultura_v2 (3).docx` |
 
@@ -22,35 +33,19 @@ GitHub repo is private — access requires rpbrandstudio install. Relevant HTML 
 
 ---
 
-## Index
+## Brand files
 
 ```
-Metta Design System/
-├── README.md                 ← you are here
-├── SKILL.md                  ← Agent Skill manifest (portable to Claude Code)
-├── colors_and_type.css       ← CSS foundations — vars, type scale, utilities
+brand/
+├── GUIDELINES.md             ← you are here
+├── colors_and_type.css       ← CSS foundations — vars, type scale, utilities, @font-face
 ├── fonts/                    ← SF Pro Italic Variable (primary is local())
 ├── assets/
 │   ├── logos/                ← Logo_metta (horizontal, vertical — 6 color variants)
 │   ├── symbols/              ← Just the circular Símbolo (icon) — 5 variants
 │   ├── signatures/           ← "metta | INTELIGÊNCIA COMERCIAL" lockup
 │   └── backgrounds/          ← Approved gradients + flat brand plates
-├── preview/                  ← Design System cards (registered)
-├── ui_kits/
-│   ├── editorial/            ← Editorial / ads / playbook surface
-│   │   ├── index.html
-│   │   ├── components.jsx
-│   │   └── README.md
-│   └── marketing/            ← Landing-page surface (v2)
-│       ├── index.html
-│       ├── components.jsx
-│       └── README.md
-└── slides/                   ← Pitch-deck kit (v2, 1920×1080)
-    ├── index.html            ← full deck via deck-stage
-    ├── components.jsx        ← TitleSlide, SectionSlide, BigStatSlide,
-    │                           QuoteSlide, ComparisonSlide, ListSlide, ClosingSlide
-    ├── deck-stage.js
-    └── preview_*.html        ← per-slide previews (registered as cards)
+└── preview/                  ← Specimen pages: colors, type, spacing, radii, components, brand
 ```
 
 ---
@@ -192,20 +187,19 @@ There is **no shipping app or SaaS product** in the source repo. This system tar
 
 ---
 
-## UI Kits
+## Kits
 
-- **`ui_kits/editorial/`** — the dark/yellow editorial surface Metta actually ships in playbooks and ads: chapter openers, value cards, protocol steps, quote blocks, pillar grids, CTA pills, the yellow transition band, símbolo background. Open `ui_kits/editorial/index.html`.
-- **`ui_kits/marketing/`** *(v2)* — landing-page surface built on the same tokens: sticky glass nav, dark hero with stat card, social-proof strip, three-pillar method, full-bleed yellow stat band, dark testimonial, three-tier pricing with highlighted middle tier, FAQ accordion, dark lead form with yellow focus ring, multi-column footer. Open `ui_kits/marketing/index.html`.
+Each surface has its own skill in this plugin, with a working template under `skills/<name>/template/`:
 
-## Slides *(v2)*
-
-`slides/index.html` — pitch-deck shell rendered through `deck-stage` (keyboard nav, print-to-PDF, scaling). Slide types: `TitleSlide`, `SectionSlide`, `BigStatSlide`, `QuoteSlide`, `ComparisonSlide`, `ListSlide`, `ClosingSlide`. Each has a per-slide preview at `slides/preview_*.html`.
+- **`slides`** — pitch-deck kit (1920×1080) on `deck-stage`: TitleSlide, SectionSlide, BigStatSlide, QuoteSlide, ComparisonSlide, ListSlide, ClosingSlide.
+- **`ads`** — paid-social ads (feed 4:5, story 9:16), variations laid out on a design canvas.
+- **`landing-page`** — landing-page surface: nav, hero, pillars, stat band, testimonial, pricing, FAQ, lead form, footer.
+- **`editorial`** — dark/yellow editorial surface for playbooks and long-form pages: section openers, bands, quote blocks, CTA pills.
 
 ---
 
 ## Caveats
 
 - No SaaS/app UI to replicate — the UI kit focuses on the editorial/marketing surface the brand actually ships.
-- No sample slide template was attached, so no `slides/` kit was generated.
 - SF Pro upright variable `.ttf` missing — see above.
 - Brand-texture imagery (`.temp-curadoria/Imagens Texturas/`) was not imported; if needed for future work, pull from the `rpbrandstudio/metta` repo.

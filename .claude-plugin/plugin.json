@@ -1,11 +1,10 @@
 {
   "name": "metta-design",
-  "version": "1.0.0",
-  "description": "Metta Design System — kits de slides, editorial e marketing com tokens, fontes, assets e componentes da marca Metta.",
+  "description": "Metta Design System — skills de marca, slides, anúncios, landing pages e páginas editoriais com tokens, fontes, assets e componentes da Metta.",
   "author": {
     "name": "Metta Brasil"
   },
   "homepage": "https://github.com/Metta-Brasil/plugin-metta-design",
   "repository": "https://github.com/Metta-Brasil/plugin-metta-design",
-  "keywords": ["metta", "design-system", "slides", "brand"]
+  "keywords": ["metta", "design-system", "brand", "slides", "ads", "landing-page"]
 }

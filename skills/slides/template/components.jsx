@@ -58,7 +58,7 @@ const SlideFooter = ({ tone = 'dark', num, total }) => {
 // ────────────────────────────────────────────────────────────────────────
 const TitleSlide = ({ kicker, title, subtitle, num, total }) => (
   <section data-screen-label="01 Title" style={{ ...slideBase, background: S.dark, color: S.white, padding: '120px 100px' }}>
-    <img src="../assets/symbols/simbolo_metta_amarelo.svg" alt="" aria-hidden="true"
+    <img src="../../../brand/assets/symbols/simbolo_metta_amarelo.svg" alt="" aria-hidden="true"
       style={{ position: 'absolute', right: -200, top: 80, width: 900, opacity: 0.06 }}/>
     <div style={{ position: 'relative', zIndex: 1, marginTop: 'auto' }}>
       <Kicker>{kicker}</Kicker>
@@ -72,7 +72,7 @@ const TitleSlide = ({ kicker, title, subtitle, num, total }) => (
         letterSpacing: '-0.005em',
       }}>{subtitle}</p>}
     </div>
-    <img src="../assets/logos/logo_metta_colorido_h.svg" alt="Metta"
+    <img src="../../../brand/assets/logos/logo_metta_colorido_h.svg" alt="Metta"
       style={{ position: 'absolute', top: 80, left: 100, height: 40 }}/>
     <SlideFooter num={num} total={total}/>
   </section>
@@ -83,7 +83,7 @@ const TitleSlide = ({ kicker, title, subtitle, num, total }) => (
 // ────────────────────────────────────────────────────────────────────────
 const SectionSlide = ({ chapter, title, num, total }) => (
   <section data-screen-label="02 Section" style={{ ...slideBase, background: S.yellow, color: S.dark, padding: '120px 100px', justifyContent: 'flex-end' }}>
-    <img src="../assets/symbols/simbolo_metta_azul.svg" alt="" aria-hidden="true"
+    <img src="../../../brand/assets/symbols/simbolo_metta_azul.svg" alt="" aria-hidden="true"
       style={{ position: 'absolute', left: -160, top: -160, width: 700, opacity: 0.10 }}/>
     <div style={{ position: 'relative', zIndex: 1 }}>
       <div style={{
@@ -128,7 +128,7 @@ const BigStatSlide = ({ kicker, stat, label, body, num, total }) => (
 // ────────────────────────────────────────────────────────────────────────
 const QuoteSlide = ({ quote, attribution, role, num, total }) => (
   <section data-screen-label="04 Quote" style={{ ...slideBase, background: S.white, color: S.dark, padding: '120px 100px', justifyContent: 'center' }}>
-    <img src="../assets/symbols/simbolo_metta_amarelo.svg" alt="" aria-hidden="true"
+    <img src="../../../brand/assets/symbols/simbolo_metta_amarelo.svg" alt="" aria-hidden="true"
       style={{ position: 'absolute', left: 100, top: 100, width: 120 }}/>
     <div style={{ maxWidth: 1500, marginTop: 80 }}>
       <p style={{
@@ -233,7 +233,7 @@ const ListSlide = ({ kicker, title, items, num, total }) => (
 // ────────────────────────────────────────────────────────────────────────
 const ClosingSlide = ({ phrase, contact, num, total }) => (
   <section data-screen-label="07 Closing" style={{ ...slideBase, background: S.dark, color: S.white, padding: '120px 100px', justifyContent: 'center' }}>
-    <img src="../assets/symbols/simbolo_metta_amarelo.svg" alt="" aria-hidden="true"
+    <img src="../../../brand/assets/symbols/simbolo_metta_amarelo.svg" alt="" aria-hidden="true"
       style={{ position: 'absolute', right: -300, bottom: -300, width: 1100, opacity: 0.07 }}/>
     <div style={{ position: 'relative', zIndex: 1, maxWidth: 1500 }}>
       <Kicker>Bora começar</Kicker>

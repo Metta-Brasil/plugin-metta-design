@@ -10,8 +10,7 @@
     {
       "name": "metta-design",
       "source": "./",
-      "description": "Metta Design System — kits de slides, editorial e marketing com tokens, fontes, assets e componentes da marca Metta.",
-      "version": "1.0.0"
+      "description": "Metta Design System — skills de marca, slides, anúncios, landing pages e páginas editoriais."
     }
   ]
 }

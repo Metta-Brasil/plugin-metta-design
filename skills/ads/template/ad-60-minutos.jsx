@@ -12,7 +12,7 @@ const Ad = ({ headline, sub, footer, ctaText = 'TOQUE NO LINK ABAIXO' }) => (
     display: 'flex', flexDirection: 'column',
   }}>
     <div style={{ paddingTop: 48, display: 'flex', justifyContent: 'center' }}>
-      <img src="../assets/logos/logo_metta_colorido_escuro_h.svg" alt="Metta"
+      <img src="../../../brand/assets/logos/logo_metta_colorido_escuro_h.svg" alt="Metta"
         style={{ height: 38 }}/>
     </div>
 
@@ -78,10 +78,10 @@ const VarC = () => (
     position: 'relative', overflow: 'hidden',
     display: 'flex', flexDirection: 'column',
   }}>
-    <img src="../assets/symbols/simbolo_metta_azul.svg" alt="" aria-hidden="true"
+    <img src="../../../brand/assets/symbols/simbolo_metta_azul.svg" alt="" aria-hidden="true"
       style={{ position:'absolute', right:-180, top:-180, width:600, opacity:0.10 }}/>
     <div style={{ paddingTop: 48, display: 'flex', justifyContent: 'center', position:'relative', zIndex:1 }}>
-      <img src="../assets/logos/logo_metta_colorido_escuro_h.svg" alt="Metta" style={{ height: 38 }}/>
+      <img src="../../../brand/assets/logos/logo_metta_colorido_escuro_h.svg" alt="Metta" style={{ height: 38 }}/>
     </div>
     <h1 style={{
       fontWeight: 870, fontStretch: '132%',
